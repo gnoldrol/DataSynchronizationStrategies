@@ -55,25 +55,26 @@
 
 # 2. **Keep application up-to-date**
 
-    >When to keep application up-to-date?  
 
-    >1.When Delete/Insert/Update Triggered 
+    When to keep application up-to-date?  
+
+>1.When Delete/Insert/Update Triggered 
 
     Everytime application trigger an CRUD action we should check the lastest version to make sure that local datastore is updateToDate
 
-    ![](crud_update.png)
+![](crud_update.png)
 
-    >2.Check up-to-date by following Screen Life-Cycle
+>2.Check up-to-date by following Screen Life-Cycle
     
     Call check up-to-date in those functions :
     - iOS : ViewDidLoad | ViewWillAppear | ViewDidAppear
     - Android : OnResume | OnCreate
     
-    *if There are new updates, updating process should be run in background to avoid responsiveness that may cause reducing User Experiences*
+*if There are new updates, updating process should be run in background to avoid responsiveness that may cause reducing User Experiences*
 
-    *We can use Timer to avoid overload due to exceed limit request from client*
+*We can use Timer to avoid overload due to exceed limit request from client*
 
-    >3. Trigger updating from server
+>3. Trigger updating from server
 
     We can use Google Clound Message or Apple Push Notification to trigger new version updating from Server.
 
