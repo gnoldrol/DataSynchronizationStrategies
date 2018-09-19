@@ -22,7 +22,7 @@ When application running for the first time after installing, we need to downloa
   
 
    
-   >1. Async-Download  
+### 1. Async-Download  
 
 
    Seperate datastore into different part, do download each part async. 
@@ -40,7 +40,7 @@ For Example :
 - Use alot of Resources since there are severals thread running at the same time
   
 
->2. High-Priority Download
+### 2. High-Priority Download
 
  Sometimes, if the data store is too big, we will need to consider about priorities of data parts. 
 
@@ -58,13 +58,13 @@ For Example :
 
 When to keep application up-to-date?  
 
->1.When Delete/Insert/Update Triggered 
+### 1. When Delete/Insert/Update Triggered 
 
 Everytime application trigger an CRUD action we should check the lastest version to make sure that local datastore is updateToDate
 
 ![](crud_update.png)
 
->2.Check up-to-date by following Screen Life-Cycle
+### 2. Check up-to-date by following Screen Life-Cycle
     
 Call check up-to-date in those functions :
 - iOS : ViewDidLoad | ViewWillAppear | ViewDidAppear
@@ -74,7 +74,7 @@ Call check up-to-date in those functions :
 
 *We can use Timer to avoid overload due to exceed limit request from client*
 
->3. Trigger updating from server
+### 3. Trigger updating from server
 
 We can use Google Clound Message or Apple Push Notification to trigger new version updating from Server.
 
@@ -86,7 +86,7 @@ We can use Google Clound Message or Apple Push Notification to trigger new versi
 
 # 3. **Keep server up-todate**
    
-   >  Uploading every time an CRUD action is trigged
+  Uploading every time an CRUD action is trigged
 
    ![](uploading.png)
 
