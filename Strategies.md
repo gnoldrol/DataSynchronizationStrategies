@@ -11,7 +11,7 @@
 
 ![](data.png)
 
-1. **First Time Synchronization** 
+# 1.  **First Time Synchronization** 
 
     When application running for the first time after installing, we need to download all the data store that needed from server. If data store is big, the downloading process might be take along time to finish. Hence, the user experience will be reduced.
 
@@ -50,7 +50,10 @@
     
     Depend on application requirements, we can define which data need to sync for the first time, which will be download later asynchronously.
 
-2. **Keep application up-to-date**
+<br>
+<br>
+
+# 2. **Keep application up-to-date**
 
     >When to keep application up-to-date?  
 
@@ -76,14 +79,20 @@
 
     *updating process should be run in background too*
 
-3. **Keep server up-todate**
+
+<br>
+<br>
+
+# 3. **Keep server up-todate**
    
    >  Uploading every time an CRUD action is trigged
 
    ![](uploading.png)
 
+<br>
+<br>
 
-4. **Cache Synchronize-Request**
+# 4. **Cache Synchronize-Request**
    
    Sometimes, if the network is interupted when synchronization is processing, the unfinished request should be cached and re-synchronize when device go online.
 
@@ -101,8 +110,6 @@
    
 
    Caching Request should be follow Singleton Pattern
-
-5. 
 
 
 
