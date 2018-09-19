@@ -17,10 +17,13 @@
 
     There are two casual pattern to make this 
 
-    > 1. Async - Download 
-    > 2. High-Priority Download
+    * Async - Download 
+    * High-Priority Download  
+  
+
    
-   ### Async-Download
+   >1. Async-Download  
+
 
    Seperate datastore into different part, do download each part async. 
    - iOS : GCD, Download Task
@@ -37,7 +40,7 @@
   - Use alot of Resources since there are severals thread running at the same time
   
 
-    ### High-Priority Download
+    >2. High-Priority Download
 
     Sometimes, if the data store is too big, we will need to consider about priorities of data parts. 
 
