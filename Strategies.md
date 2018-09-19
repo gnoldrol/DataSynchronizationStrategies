@@ -13,7 +13,7 @@
 
 # 1.  **First Time Synchronization** 
 
-    When application running for the first time after installing, we need to download all the data store that needed from server. If data store is big, the downloading process might be take along time to finish. Hence, the user experience will be reduced.
+When application running for the first time after installing, we need to download all the data store that needed from server. If data store is big, the downloading process might be take along time to finish. Hence, the user experience will be reduced.
 
     There are two casual pattern to make this 
 
@@ -29,26 +29,26 @@
    - iOS : GCD, Download Task
    - Android : AsyncTask
 
-    For Example : 
+For Example : 
   
   ![](async_download.png)  
 
     
-  #### Pros:  
-  - Faster download
-  #### Cons:
-  - Use alot of Resources since there are severals thread running at the same time
+#### Pros:  
+- Faster download
+#### Cons:
+- Use alot of Resources since there are severals thread running at the same time
   
 
-    >2. High-Priority Download
+>2. High-Priority Download
 
-    Sometimes, if the data store is too big, we will need to consider about priorities of data parts. 
+ Sometimes, if the data store is too big, we will need to consider about priorities of data parts. 
 
-    For Example :
+ For Example :
 
-        - User data and Folder Structure's Priority is higher than Photo, Because User Data and Folder Structure need to display first. Photo's data can be download later when user open the folder and photos. 
+ - User data and Folder Structure's Priority is higher than Photo, Because User Data and Folder Structure need to display first. Photo's data can be download later when user open the folder and photos. 
     
-    Depend on application requirements, we can define which data need to sync for the first time, which will be download later asynchronously.
+ Depend on application requirements, we can define which data need to sync for the first time, which will be download later asynchronously.
 
 <br>
 <br>
@@ -56,19 +56,19 @@
 # 2. **Keep application up-to-date**
 
 
-    When to keep application up-to-date?  
+When to keep application up-to-date?  
 
 >1.When Delete/Insert/Update Triggered 
 
-    Everytime application trigger an CRUD action we should check the lastest version to make sure that local datastore is updateToDate
+Everytime application trigger an CRUD action we should check the lastest version to make sure that local datastore is updateToDate
 
 ![](crud_update.png)
 
 >2.Check up-to-date by following Screen Life-Cycle
     
-    Call check up-to-date in those functions :
-    - iOS : ViewDidLoad | ViewWillAppear | ViewDidAppear
-    - Android : OnResume | OnCreate
+Call check up-to-date in those functions :
+- iOS : ViewDidLoad | ViewWillAppear | ViewDidAppear
+- Android : OnResume | OnCreate
     
 *if There are new updates, updating process should be run in background to avoid responsiveness that may cause reducing User Experiences*
 
@@ -76,9 +76,9 @@
 
 >3. Trigger updating from server
 
-    We can use Google Clound Message or Apple Push Notification to trigger new version updating from Server.
+We can use Google Clound Message or Apple Push Notification to trigger new version updating from Server.
 
-    *updating process should be run in background too*
+ *updating process should be run in background too*
 
 
 <br>
@@ -95,7 +95,7 @@
 
 # 4. **Cache Synchronize-Request**
    
-   Sometimes, if the network is interupted when synchronization is processing, the unfinished request should be cached and re-synchronize when device go online.
+Sometimes, if the network is interupted when synchronization is processing, the unfinished request should be cached and re-synchronize when device go online.
 
    Local storage for Caching :
    
